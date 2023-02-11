@@ -1,4 +1,4 @@
-import com.mongodb.ConnectionString
+/*import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings
 import com.mongodb.MongoClientSettings.getDefaultCodecRegistry
 import com.mongodb.ServerApi
@@ -12,17 +12,17 @@ import org.bson.codecs.configuration.CodecRegistries.fromRegistries
 import org.bson.codecs.pojo.PojoCodecProvider
 import org.bson.types.ObjectId
 
-data class Item(
+data class ItemRealm2(
     var _id: ObjectId = ObjectId.get(),
     var complete: Boolean = false,
     var summary: String = "",
     var owner_id: String = "")
 
-val user = "itbgomez"
-val password = "dFis93A1773w8Mlk"
-
 fun main()
 {
+    val user = "itbgomez"
+    val password = "dFis93A1773w8Mlk"
+
     val pojoCodecProvider = PojoCodecProvider.builder().automatic(true).build()
     val pojoCodecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider))
     val connectionString =
@@ -39,9 +39,8 @@ fun main()
 
     val database: MongoDatabase = mongoClient.getDatabase("todo")
         .withCodecRegistry(pojoCodecRegistry);
-    val collection: MongoCollection<Item> = database.getCollection("Item", Item::class.java)
+    val collection: MongoCollection<ItemRealm2> = database.getCollection("ItemRealm2", ItemRealm2::class.java)
 
-    val item = Item(summary = "Something")
+    val item = ItemRealm2(summary = "ITB")
     collection.insertOne(item)
-    println("WTF")
-}
+}*/

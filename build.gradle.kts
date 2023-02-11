@@ -18,6 +18,11 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation("io.realm.kotlin:library-sync:1.5.0")
     implementation("org.mongodb:mongodb-driver-sync:4.7.1")
+    implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1")
+
 }
 
 tasks.test {
